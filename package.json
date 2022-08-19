@@ -1,0 +1,30 @@
+{
+  "name": "webpack5-test",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.91chi.fun//https://github.com/ddzy/webpack5-test.git",
+  "author": "n年级 <1766083035@qq.com>",
+  "license": "MIT",
+  "scripts": {
+    "commit": "git-cz"
+  },
+  "config": {
+    "commitizen": {
+      "path": "node_modules/cz-conventional-changelog"
+    }
+  },
+  "gitHooks": {
+    "pre-commit": "lint-staged"
+  },
+  "lint-staged": {
+    "src/**/*.{js,jsx,vue,ts,tsx}": [
+      "yarn format",
+      "git add"
+    ]
+  },
+  "devDependencies": {
+    "commitizen": "^4.2.5",
+    "cz-conventional-changelog": "^3.3.0",
+    "lint-staged": "^13.0.3"
+  }
+}
