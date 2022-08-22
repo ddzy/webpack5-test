@@ -7,7 +7,9 @@
   "license": "MIT",
   "scripts": {
     "commit": "git-cz",
-    "serve": "webpack-dev-server"
+    "serve": "webpack-dev-server",
+    "build": "npx webpack --config ./webpack/development.config.js",
+    "build:pro": "npx webpack --config ./webpack/production.config.js"
   },
   "config": {
     "commitizen": {
