@@ -8,8 +8,9 @@
   "scripts": {
     "commit": "git-cz",
     "serve": "cross-env NODE_ENV=development APP_ENV=development webpack serve --config ./webpack/development.config.js",
-    "build": "cross-env NODE_ENV=production APP_ENV=development webpack --config ./webpack/lib.config.js",
-    "build:pro": "cross-env NODE_ENV=production APP_ENV=production webpack --config ./webpack/production.config.js"
+    "build": "cross-env NODE_ENV=production APP_ENV=development webpack --config ./webpack/development.config.js",
+    "build:pro": "cross-env NODE_ENV=production APP_ENV=production webpack --config ./webpack/production.config.js",
+    "build:lib": "cross-env NODE_ENV=production APP_ENV=production webpack --config ./webpack/lib.config.js"
   },
   "config": {
     "commitizen": {

@@ -8,6 +8,18 @@ const baseConfig = {
   entry: {
     index: "./src/index.js",
   },
+  module: {
+    rules: [
+      {
+        test: /.test$/,
+        use: [
+          {
+            loader: path.resolve(__dirname, '../loader/test.loader.js'),
+          },
+        ],
+      },
+    ],
+  },
   output: {
     path: path.resolve(__dirname, "../dist"),
   },
