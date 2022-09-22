@@ -1,11 +1,7 @@
-import css from './index.scss';
+const test1 = require("./test1");
+const test2 = require("./test2");
 
-console.log('css :>> ', css);
-
-function render() {
-  const div = document.createElement('div');
-  div.innerHTML += `testtesttest`;
-  document.body.appendChild(div);
-}
-
-render();
+module.exports = {
+  test1,
+  test2,
+};
