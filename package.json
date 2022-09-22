@@ -7,9 +7,9 @@
   "license": "MIT",
   "scripts": {
     "commit": "git-cz",
-    "serve": "webpack-dev-server",
-    "build": "npx webpack --config ./webpack/development.config.js",
-    "build:pro": "npx webpack --config ./webpack/production.config.js"
+    "serve": "cross-env NODE_ENV=development webpack serve --config ./webpack/development.config.js",
+    "build": "cross-env NODE_ENV=production webpack --config ./webpack/production.config.js",
+    "build:pro": "cross-env NODE_ENV=production webpack --config ./webpack/production.config.js"
   },
   "config": {
     "commitizen": {
@@ -28,6 +28,7 @@
   "devDependencies": {
     "clean-webpack-plugin": "^4.0.0",
     "commitizen": "^4.2.5",
+    "cross-env": "^7.0.3",
     "css-loader": "^6.7.1",
     "cz-conventional-changelog": "^3.3.0",
     "dart-sass": "^1.25.0",
