@@ -9,21 +9,26 @@ const baseConfig = {
     index: "./src/index.js",
   },
   module: {
-    rules: [
-      {
-        test: /.test$/,
-        use: [
-          {
-            loader: path.resolve(__dirname, '../loader/test.loader.js'),
-          },
-        ],
-      },
-    ],
+    // rules: [
+    //   {
+    //     test: /.test$/,
+    //     use: [
+    //       {
+    //         loader: path.resolve(__dirname, '../loader/test-loader.js'),
+    //       },
+    //     ],
+    //   },
+    // ],
+  },
+  // inline-loader
+  resolveLoader: {
+    modules: ["node_modules", path.resolve(__dirname, "../loader")],
   },
   output: {
     path: path.resolve(__dirname, "../dist"),
   },
   stats: "errors-only",
+  devtool: 'source-map',
 };
 
 module.exports = [
